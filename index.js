@@ -10,6 +10,18 @@ board = [
   ["_","_","_","_","4","_","1","_","_"]
 ]
 
+extremely_hard_board = [
+  ["_","_","_","_","1","_","_","_","_"],
+  ["_","5","_","_","9","4","_","6","_"],
+  ["4","_","_","2","_","_","_","_","_"],
+  ["3","_","2","_","_","_","8","_","_"],
+  ["_","6","_","_","_","_","_","3","_"],
+  ["_","9","_","_","_","8","5","4","_"],
+  ["_","_","_","_","2","_","_","9","_"],
+  ["7","_","_","_","_","_","_","2","1"],
+  ["_","_","_","7","_","6","_","_","_"]
+]
+
 board.forEach((row, row_num) => {
   row.forEach((item, col_num) => {
     var elem = getElement(row_num + 1, col_num + 1);
@@ -41,6 +53,10 @@ function getElement(row, col) {
 
 function getValue(row, col) {
   var elem = getElement(row, col);
-  var text = elem.getElementsByTagName('p')[0].innerHTML;
-  return parseInt(text);
+  try {
+    var text = elem.getElementsByTagName('p')[0].innerHTML;
+    return parseInt(text);
+  } catch (error) {
+    return null;
+  }
 }
