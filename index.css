@@ -1,0 +1,55 @@
+.everything {
+  display: flex;
+}
+
+.row {
+  display: flex;
+  flex: 3;
+}
+
+.hint {
+  background-color: #ede972;
+}
+
+.square {
+  flex: 1;
+  height: 9vmin;
+  width: 9vmin;
+
+  border-top: 1px;
+  border-left: 1px;
+  border-top-style: solid;
+  border-left-style: solid;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.square p {
+  margin: 0;
+  font-size: 5.5vw;
+}
+
+.col4, .col7, .col1{
+  border-left-width: 3px;
+}
+
+.top div {
+  border-top-width: 3px;
+}
+
+.bottom {
+  border-bottom: 3px;
+  border-bottom-style: solid;
+}
+
+.col9 {
+  border-right: 3px;
+  border-right-style: solid;
+}
+
+.row9 {
+  border-bottom: 1px;
+  border-bottom-style: solid;
+}
